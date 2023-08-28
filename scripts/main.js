@@ -7,10 +7,16 @@ function login(token) {
     }, 2500);
 }
 
-alert("press INSERT on login screen to login via token!");
+alert("enter token! (type '0' to stay on account)");
 
-document.addEventListener('keydown', (event) => {
-    if (event.key == "Insert")
-    var a= prompt("enter your token: ", "token");
-        login(a);
-  }, false);
+var a= prompt("enter token! (leave empty to stay on account)", "token");
+if (a == "0")
+{
+
+}
+else
+{
+    login(a);
+}
+        
+
